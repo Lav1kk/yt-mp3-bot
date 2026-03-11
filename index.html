@@ -533,7 +533,7 @@
     tg.ready();
     tg.expand();
     // Получаем chat_id пользователя из Telegram
-    chatId = tg.initDataUnsafe?.user?.id || null;
+    chatId = tg.initDataUnsafe?.user?.id || tg.initDataUnsafe?.chat?.id || null;
   }
 
   const history = JSON.parse(localStorage.getItem('yt_mp3_history') || '[]');
